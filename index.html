@@ -13,6 +13,9 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+
+        <link href="themes/4/js-image-slider.css" rel="stylesheet" type="text/css" />
+        <script src="themes/4/js-image-slider.js" type="text/javascript"></script>
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -20,7 +23,69 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+
+        <img src="img/logo.png" id="store_logo">
+
+        <main>
+            <q>The finest in breakfast treats and coffees since 1971</q>
+            <p id="description">Donut Delights has been serving C-U with the highest quality donuts and coffees since 1971.
+                Nestled in downtown Urbana, Donut Delights has become a haven for “Gotta have it” breakfast treats.
+                Our donuts are baked fresh twice daily and our coffee’s brewed every fifteen minutes.
+                If you have never been to C-U’s hidden gem, you are missing out.</p>
+            <div id="sliderFrame">
+                <div id="slider">
+                    <img src="img/donuts1.jpg">
+                    <img src="img/donuts2.jpg">
+                    <img src="img/people.jpg">
+                    <img src="img/donuts3.jpg">
+                    <img src="img/donuts4.jpg">
+                    <img src="img/donuts5.jpg">
+                </div>
+                <!--Custom navigation buttons on both sides-->
+                <div class="group1-Wrapper">
+                    <a onclick="imageSlider.previous()" class="group1-Prev"></a>
+                    <a onclick="imageSlider.next()" class="group1-Next"></a>
+                </div>
+                <!--nav bar-->
+                <div style="text-align:center;padding:20px;z-index:20;">
+                    <a onclick="imageSlider.previous()" class="group2-Prev"></a>
+                    <a id='auto' onclick="switchAutoAdvance()"></a>
+                    <a onclick="imageSlider.next()" class="group2-Next"></a>
+                 </div>
+            </div>
+        </main>
+
+        <footer>
+            <p id="fun_fact">placeholder text for fun fact</p>
+            <p>Copyright &copy; 2018 Donut Delights</p>
+            <p id="address">2112 Main Street Urbana, Illinois 61801<br>
+                            (217)-555-1234</p>
+        </footer>
+
+        <script type="text/javascript">
+            //The following script is for the group 2 navigation buttons.
+            function switchAutoAdvance() {
+                imageSlider.switchAuto();
+                switchPlayPauseClass();
+            }
+            function switchPlayPauseClass() {
+                var auto = document.getElementById('auto');
+                var isAutoPlay = imageSlider.getAuto();
+                auto.className = isAutoPlay ? "group2-Pause" : "group2-Play";
+                auto.title = isAutoPlay ? "Pause" : "Play";
+            }
+            switchPlayPauseClass();
+        </script>
+
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>

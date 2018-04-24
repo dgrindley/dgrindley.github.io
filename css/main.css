@@ -102,8 +102,21 @@ textarea {
     src: url('Cabold Comic demo.otf');
 }
 
+@font-face {
+    font-family: Nyala;
+    src: url('nyala.ttf');
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
+    min-width: 1366px;
+    position: relative;
     background-image: url('../img/store.jpg');
+    background-size: cover;
 }
 
 nav {
@@ -134,32 +147,92 @@ nav ul li a {
 }
 
 #store_logo {
+    z-index: 2;
     position: absolute;
     top: 2px;
     margin-left: 20px;
 }
 
+main {
+    height: 75vh;
+    min-height: 660px;
+    margin: 0 auto;
+    width: 1000px;
+
+    background-color: rgba(66, 43, 37, 0.9);
+    color: #F5B142;
+
+    font-family: Nyala, serif;
+    font-size: 24px;
+
+    text-align: center;
+}
+
+q {
+    font-family: CaboldComic, serif;
+    font-size: 18px;
+    line-height: 75px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #783425;
+}
+
+#description {
+    margin: 0 auto;
+    width: 68%;
+}
+
+#sliderFrame {
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 68%;
+}
+
 footer {
     z-index: 1;
-    
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)); */
-    /* text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25); */
-    
-    /* solid color looks better than gradient */
+
     color: #F5B142;
     background-color: #281200;
     text-align: center;
+
+    font-size: 16px;
     
     height: 50px;
     width: 100%;
     overflow: hidden;
-    
-    /* clear: both; */
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
 
+/* 3 columns in footer */
+footer div {
+    width: 33.333%;
+}
 
+/* Sticky footer */
+.page-wrap {
+    min-height: 100%;
+    margin-bottom: -50px;
+}
 
+.page-wrap:after {
+    content: "";
+    display: block;
+    height: 50px;
+}
 
+#fun_fact {
+    text-align: left;
+    margin-left: 25px;
+}
+
+#address {
+    text-align: right;
+    padding-right: 8px;
+    margin-top: 4px;
+}
 
 
 /* ==========================================================================

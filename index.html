@@ -23,17 +23,20 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-            </ul>
-        </nav>
+        <div class="page-wrap">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </nav>
 
-        <img src="img/logo.png" id="store_logo">
+            <img src="img/logo.png" id="store_logo">
+        </header>
 
         <main>
             <q>The finest in breakfast treats and coffees since 1971</q>
@@ -43,32 +46,40 @@
                 If you have never been to C-U’s hidden gem, you are missing out.</p>
             <div id="sliderFrame">
                 <div id="slider">
-                    <img src="img/donuts1.jpg">
-                    <img src="img/donuts2.jpg">
-                    <img src="img/people.jpg">
-                    <img src="img/donuts3.jpg">
-                    <img src="img/donuts4.jpg">
-                    <img src="img/donuts5.jpg">
+                    <img src="img/donuts1_small.jpg">
+                    <img src="img/donuts2_small.jpg">
+                    <img src="img/people_small.jpg">
+                    <img src="img/donuts3_small.jpg">
+                    <img src="img/donuts4_small.jpg">
                 </div>
-                <!--Custom navigation buttons on both sides-->
+                <!--Custom navigation buttons on both sides
                 <div class="group1-Wrapper">
                     <a onclick="imageSlider.previous()" class="group1-Prev"></a>
                     <a onclick="imageSlider.next()" class="group1-Next"></a>
                 </div>
-                <!--nav bar-->
+                -->
+                <!--nav bar
                 <div style="text-align:center;padding:20px;z-index:20;">
                     <a onclick="imageSlider.previous()" class="group2-Prev"></a>
                     <a id='auto' onclick="switchAutoAdvance()"></a>
                     <a onclick="imageSlider.next()" class="group2-Next"></a>
                  </div>
+                -->
             </div>
         </main>
+        </div>
 
         <footer>
-            <p id="fun_fact">placeholder text for fun fact</p>
-            <p>Copyright &copy; 2018 Donut Delights</p>
-            <p id="address">2112 Main Street Urbana, Illinois 61801<br>
+            <div>
+                <p id="fun_fact">Fun fact:</p>
+            </div>
+            <div>
+                <p id="copyright">Copyright &copy; 2018 Donut Delights</p>
+            </div>
+            <div>
+                <p id="address">2112 Main Street Urbana, Illinois 61801<br>
                             (217)-555-1234</p>
+            </div>
         </footer>
 
         <script type="text/javascript">

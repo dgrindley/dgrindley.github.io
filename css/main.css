@@ -154,7 +154,7 @@ nav ul li a {
 }
 
 main {
-    height: 75vh;
+    height: 80vh;
     min-height: 660px;
     margin: 0 auto;
     width: 1000px;
@@ -186,6 +186,38 @@ q {
     margin-left: auto;
     margin-right: auto;
     width: 68%;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 72px;
+}
+
+/* about us */
+#aboutus {
+    margin: 0 auto;
+    font-size: 18px;
+    font-family: Nyala, serif;
+
+    width: 62%;
+    text-align: left;
+}
+
+/* menu */
+#menu {
+    margin: 0 auto;
+    font-size: 18px;
+    width: 65%;
+    text-align: right;
+    border-spacing: 16px;
+}
+
+.price {
+    width: 75px;
+}
+
+#top_sellers {
+    font-size: 18px;
 }
 
 footer {

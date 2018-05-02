@@ -43,8 +43,8 @@ var getDictEntries = function() {
 }
 
 var searchJisho = function(query) {
-    // var jishoAPI = "http://jisho.org/api/v1/search/words?keyword="
-    var jishoAPI = "http://jisho.org/api/v1/search/words?"
+    // var jishoAPI = "https://jisho.org/api/v1/search/words?keyword="
+    var jishoAPI = "https://jisho.org/api/v1/search/words?"
     var results = [];
 
     for (var i = 0; i < query.length; i++) {

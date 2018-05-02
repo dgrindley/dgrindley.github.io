@@ -1,113 +1,21 @@
-<!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="apple-touch-icon" href="icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-
-        <link href="themes/4/js-image-slider.css" rel="stylesheet" type="text/css" />
-        <script src="themes/4/js-image-slider.js" type="text/javascript"></script>
-    </head>
-    <body>
-        <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
-        <!-- Add your site or application content here -->
-        <div class="page-wrap">
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="reviews.html">Reviews</a></li>
-                </ul>
-            </nav>
-
-            <img src="img/logo.png" id="store_logo">
-        </header>
-
-        <main>
-            <q>The finest in breakfast treats and coffees since 1971</q>
-            <p id="description">Donut Delights has been serving C-U with the highest quality donuts and coffees since 1971.
-                Nestled in downtown Urbana, Donut Delights has become a haven for “Gotta have it” breakfast treats.
-                Our donuts are baked fresh twice daily and our coffee’s brewed every fifteen minutes.
-                If you have never been to C-U’s hidden gem, you are missing out.</p>
-            <div id="sliderFrame">
-                <div id="slider">
-                    <img src="img/donuts1_small.jpg">
-                    <img src="img/donuts2_small.jpg">
-                    <img src="img/people_small.jpg">
-                    <img src="img/donuts3_small.jpg">
-                    <img src="img/donuts4_small.jpg">
-                </div>
-                <!--Custom navigation buttons on both sides
-                <div class="group1-Wrapper">
-                    <a onclick="imageSlider.previous()" class="group1-Prev"></a>
-                    <a onclick="imageSlider.next()" class="group1-Next"></a>
-                </div>
-                -->
-                <!--nav bar
-                <div style="text-align:center;padding:20px;z-index:20;">
-                    <a onclick="imageSlider.previous()" class="group2-Prev"></a>
-                    <a id='auto' onclick="switchAutoAdvance()"></a>
-                    <a onclick="imageSlider.next()" class="group2-Next"></a>
-                 </div>
-                -->
-            </div>
-        </main>
-        </div>
-
-        <footer>
-            <div>
-                <p id="fun_fact">Fun fact:</p>
-            </div>
-            <div>
-                <p id="copyright">Copyright &copy; 2018 Donut Delights</p>
-            </div>
-            <div>
-                <p id="address">2112 Main Street Urbana, Illinois 61801<br>
-                            (217)-555-1234</p>
-            </div>
-        </footer>
-
-        <script type="text/javascript">
-            //The following script is for the group 2 navigation buttons.
-            function switchAutoAdvance() {
-                imageSlider.switchAuto();
-                switchPlayPauseClass();
-            }
-            function switchPlayPauseClass() {
-                var auto = document.getElementById('auto');
-                var isAutoPlay = imageSlider.getAuto();
-                auto.className = isAutoPlay ? "group2-Pause" : "group2-Play";
-                auto.title = isAutoPlay ? "Pause" : "Play";
-            }
-            switchPlayPauseClass();
-        </script>
-
-        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-        <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-    </body>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+    <main>
+        <h1>Portal</h1>
+        <ul>
+            <li><a href="CSC152/index.html">CSC 152 Final Project</a> <span class="badge badge-danger">WIP</span></li>
+            <li><a href="CSC175/index.html">CSC 175 Final Project</a> <span class="badge badge-danger">WIP</span></li>
+        </ul>
+        <p>Small portal made for final projects</p>
+    </main>
+</body>
 </html>

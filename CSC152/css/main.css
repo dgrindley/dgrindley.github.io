@@ -107,6 +107,10 @@ textarea {
     src: url('nyala.ttf');
 }
 
+::selection {
+    background: #F5B142;
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -115,6 +119,7 @@ html, body {
 body {
     min-width: 1366px;
     position: relative;
+    background-color: #281200;
     background-image: url('../img/store.jpg');
     background-size: cover;
 }
@@ -218,6 +223,161 @@ h1 {
 
 #top_sellers {
     font-size: 18px;
+}
+
+/* contact */
+.contact-row {
+    display: flex;
+}
+
+.contact-column {
+    flex: 50%;
+}
+
+#place_info {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 120px;
+}
+
+#social_media {
+    padding-left: 30px;
+}
+
+#social_media a {
+    padding-right: 10px;
+}
+
+#newsletter {
+    margin: 0 auto;
+    padding-top: 32px;
+}
+
+#newsletter p {
+    margin: 0 auto;
+    width: 330px;
+    font-size: 18px;
+    text-align: left;
+}
+
+#subscriber {
+    padding-top: 16px;
+
+    font-family: Nyala, serif;
+    font-size: 18px;
+    text-align: center;
+
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #783425;
+
+    width: 330px;
+    height: 40px;
+    
+    color: #F5B142;
+}
+
+#subscriber:focus {
+    outline: none;
+}
+
+#subscriber::placeholder {
+    font-family: Nyala, serif;
+    font-size: 18px;
+    color: #F5B142;
+    text-align: center;
+    opacity: 0.25;
+}
+
+#subscribe_button {
+    display: block;
+    float: right;
+
+    font-family: Nyala, serif;
+    font-size: 18px;
+    color: #F5B142;
+    background: #783425;
+    border: none;
+
+    margin-top: 12px;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#subscribe_button:hover {
+    cursor: pointer;
+}
+
+/* reviews */
+.review-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.review-col {
+    float: left;
+}
+
+.left {
+    width: 25%;
+    text-align: right;
+    padding-right: 32px;
+}
+
+.right {
+    width: 60%;
+    text-align: left;
+    font-size: 18px;
+}
+
+#write_review label {
+    font-family: Nyala, serif;
+    font-size: 18px;
+    color: #F5B142;
+
+    padding-right: 12px;
+}
+
+#own_review {
+    font-family: Nyala, serif;
+    font-size: 18px;
+
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #783425;
+
+    color: #F5B142;
+
+    width: 600px;
+}
+
+#own_review:focus {
+    outline: none;
+}
+
+#post_button {
+    font-family: Nyala, serif;
+    font-size: 18px;
+    color: #F5B142;
+    background: #783425;
+    border: none;
+
+    margin-left: 12px;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#post_button:hover {
+    cursor: pointer;
 }
 
 footer {

@@ -50,11 +50,7 @@
                     <img src="img/donut_icon_sm.png">
                 </div>
                 <div class="review-col right">
-                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac placerat lectus. In hac
-                        habitasse platea dictumst. Nam id dui turpis. Sed placerat sapien quis risus auctor, a dictum nibh lacinia.
-                        Vestibulum non ipsum consectetur, ultrices sem vitae, imperdiet nunc.
-                        Pellentesque ut justo accumsan enim bibendum sagittis. Suspendisse gravida ante ex, id tristique lacus tristique eu.”
-                    </p>
+                    <p>"Best donuts I've ever had. Really wish I knew about this place sooner."</p>
                 </div>
             </div>
             <div class="review-row">
@@ -65,9 +61,8 @@
                     <img src="img/donut_icon_sm.png">
                 </div>
                 <div class="review-col right">
-                    <p>“Cras id vestibulum sem, eu hendrerit eros. Pellentesque sit amet metus velit.
-                        Vivamus est tellus, pulvinar imperdiet pretium ut, dapibus lobortis massa.”
-                    </p>
+                    <p>"Great donuts and even greater service! If you plan on visiting any time soon,
+                       I recommend you try the Boston Cream delights. It's no surprise they're a top seller."</p>
                 </div>
             </div>
             <div class="review-row">
@@ -79,17 +74,32 @@
                     <img src="img/donut_icon_sm.png">
                 </div>
                 <div class="review-col right">
-                    <p>“Sed vitae dui aliquam, tincidunt tellus eget, molestie nisl.
-                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                        In fermentum, quam et rutrum faucibus, urna magna porta odio, in pulvinar nulla magna sit amet dui.”
-                    </p>
+                    <p>"I have come here every Monday morning since 1994 and it has only gotten better.
+                       Melvin has created a special place for many people."</p>
                 </div>
             </div>
 
             <div id="write_review">
-                <label for="own_review">Write your own:</label>
-                <input type="text" id="own_review">
-                <button type="button" id="post_button">Post</button>
+                <form action="https://formspree.io/devlingrindley@gmail.com" method="POST">
+                    <label for="own_review">Write your own:</label>
+                    <input type="text" name="_review" id="own_review">
+                    <button type="submit" value="Send" id="post_button">Post</button>
+                    
+                    <div id="rating">
+                        <input type="radio" name="review_rating" id="one_donut">
+                        <label for="one_donut">1</label>
+                        <input type="radio" name="review_rating" id="two_donut">
+                        <label for="two_donut">2</label>
+                        <input type="radio" name="review_rating" id="three_donut">
+                        <label for="three_donut">3</label>
+                        <input type="radio" name="review_rating" id="four_donut">
+                        <label for="four_donut">4</label>
+                        <input type="radio" name="review_rating" id="five_donut">
+                        <label for="five_donut">5</label>
+                    </div>
+                </form>
+                
+                <small>Please note: Reviews are not posted automatically. This is to prevent spambots from flooding the page.</small>
             </div>
         </main>
         </div>

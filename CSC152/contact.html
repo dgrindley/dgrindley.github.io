@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Contact - Donut Delights</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -65,8 +65,10 @@
 
                     <div id="newsletter">
                         <p>Subscribe to our newsletter for the latest on our seasonal offerings and special events:</p>
-                        <input type="text" id="subscriber" placeholder="your@email.com">
-                        <button type="button" id="subscribe_button">Subscribe</button>
+                        <form action="https://formspree.io/devlingrindley@gmail.com" method="POST">
+                            <input type="email" name="_replyto" id="subscriber" placeholder="your@email.com">
+                            <button type="submit" id="subscribe_button" value="Send">Subscribe</button>
+                        </form>
                     </div>
                 </div>
                 <div class="contact-column">

@@ -9,4 +9,4 @@ $(document).ready(function() {
     ];
 
     $("#fun_fact").append(" " + facts[Math.floor(Math.random() * facts.length)]);
-})
+});

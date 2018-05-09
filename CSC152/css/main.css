@@ -344,6 +344,32 @@ h1 {
     padding-right: 12px;
 }
 
+#rating {
+    height: 48px;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+input[type=radio] + label {
+    background: url('../img/donut_icon.png') left top no-repeat;
+    min-height: 32px;
+    opacity: 0.25;
+    padding-left: 50px;
+    padding-bottom: 12px;
+}
+
+input[type=radio]:checked + label {
+    background: url('../img/donut_icon.png') left top no-repeat;
+    padding-left: 50px;
+    opacity: 1;
+}
+
+input[type=radio] + label:hover {
+    cursor: pointer;
+}
+
 #write_review small {
     font-size: 14px;
 }

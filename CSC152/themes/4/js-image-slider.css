@@ -23,6 +23,10 @@
     transform: translate3d(0,0,0);
 }
 
+.mc-caption {
+    display: none;
+}
+
 /* the link style (if slide image is wrapped by a link) */
 #slider a.imgLink, #slider .video {
     z-index:2;

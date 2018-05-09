@@ -303,10 +303,7 @@ h1 {
 
     margin-top: 12px;
 
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 8px 16px 8px 16px;
 }
 
 #subscribe_button:hover {
@@ -361,7 +358,6 @@ input[type=radio] + label {
 }
 
 input[type=radio]:checked + label {
-    background: url('../img/donut_icon.png') left top no-repeat;
     padding-left: 50px;
     opacity: 1;
 }

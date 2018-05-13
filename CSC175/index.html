@@ -1,37 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Japanese flashcard helper</title>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Japanese flashcard helper</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="js/define.js"></script>
-  </head>
-  <body>
-    <h1 class="display-4">Japanese flashcard helper</h1>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/main.css">
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="js/define.js"></script>
+    </head>
+    <body>
+        <h1 class="display-4">Japanese flashcard helper</h1>
 
-    <label class="sr-only" for="sentence">Enter your sentence here</label>
-    <div class="input-group" id="sentenceGroup">
-        <input type="text" class="form-control" id="sentence" name="sentence" placeholder="Enter your sentence here" required>
-        <span class="input-group-append">
-            <button class="btn btn-outline-primary" type="button" onclick="getDictEntries()">Define</button>
-        </span>
-    </div>
+        <label class="sr-only" for="sentence">Enter your sentence here</label>
+        <div class="input-group" id="sentenceGroup">
+            <input type="text" class="form-control" id="sentence" name="sentence" data-toggle="tooltip" data-placement="top" placeholder="Enter your sentence here" required>
+            <span class="input-group-append">
+                <button class="btn btn-outline-primary" id="define" type="button" onclick="getDictEntries()">Define</button>
+            </span>
+        </div>
 
-    <p id="instructions">For words that you want definitions for, encase them in asterisks *like* *this*<br>
-    Don't know Japanese? Try it out with this example sentence: <mark>*日本語*は、*習う*。</mark></p>
+        <p id="instructions">For words that you want definitions for, encase them in asterisks *like* *this*<br>
+        Don't know Japanese? Try it out with this example sentence: <mark>*日本語*は、*習う*。</mark></p>
 
-    <footer>
-        <p id="copyright">&copy; Devlin Grindley 2018, made with <a href="http://jisho.org/">Jisho</a></p>
-    </footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <h2>Word</h2>
+                </div>
+                <div class="col-10">
+                    <h2>Entries</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <div id="keywordLinks" class="list-group">
+                        <!-- <a href="#" class="list-group-item">somethin</a> -->
+                        <!-- <a href="#" class="list-group-item">anotehr somethin</a> -->
+                    </div>
+                </div>
+                <div class="col-10">
+                    <table id="results" class="table">
+                        <tr>
+                            <th>Word</th>
+                            <th>Reading</th>
+                            <th>English</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p id="copyright">&copy; Devlin Grindley 2018, made with <a href="http://jisho.org/">Jisho</a> & <a href="https://cors.io/">cors.io</a></p>
+        </footer>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-  </body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    </body>
 </html>

@@ -8,6 +8,11 @@ h1 {
     padding-bottom: 24px;
 }
 
+h2 {
+    text-align: center;
+    padding-bottom: 24px;
+}
+
 #sentenceGroup {
     margin: 0 auto;
     width: 640px;
@@ -15,9 +20,14 @@ h1 {
 
 #instructions {
     padding-top: 16px;
+    padding-bottom: 16px;
     text-align: center;
     font-size: 75%;
     line-height: 24px;
+}
+
+footer {
+    padding-top: 24px;
 }
 
 #copyright {

@@ -42,24 +42,157 @@
             <div class="row">
                 <div class="col-2">
                     <div id="keywordLinks" class="list-group">
-                        <!-- <a href="#" class="list-group-item">somethin</a> -->
-                        <!-- <a href="#" class="list-group-item">anotehr somethin</a> -->
                     </div>
                 </div>
                 <div class="col-10">
-                    <table id="results" class="table">
-                        <tr>
-                            <th>Word</th>
-                            <th>Reading</th>
-                            <th>English</th>
-                        </tr>
+                    <table id="results" class="table table-hover">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Word</th>
+                                <th>Reading</th>
+                                <th>English</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
                     </table>
                 </div>
             </div>
         </div>
 
+        <div class="modal" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="detailModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            <span id="modalTitle">日本語</span>
+                            <span id="modalCommon" class="badge badge-success" hidden>Common</span>
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-sm">
+                            <tbody>
+                                <tr>
+                                    <td>Word(s)</td>
+                                    <td id="modalWords">日本語</td>
+                                </tr>
+                                <tr>
+                                    <td>Reading(s)</td>
+                                    <td id="modalReadings">にほんご, にっぽんご</td>
+                                </tr>
+                                <tr>
+                                    <td>English</td>
+                                    <td id="modalEnglish">Japanese (language)</td>
+                                </tr>
+                                <tr>
+                                    <td>Part(s) of speech</td>
+                                    <td id="modalPartsOfSpeech">Noun, No-adjective</td>
+                                </tr>
+                                <tr>
+                                    <td>Info</td>
+                                    <td id="modalInfo"></td>
+                                </tr>
+                                <tr>
+                                    <td>Links</td>
+                                    <td id="modalLinks">
+                                        <a href="#">Read Japanese language on English Wikipedia</a>
+                                        <a href="#">Read 日本語 on Japanese Wikipedia</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>See also</td>
+                                    <td id="modalSeeAlso">
+                                        <a href="#">国語　こくご</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Tags</td>
+                                    <td id="modalTags">
+                                        <span class="badge badge-info">wanikani10</span>
+                                        <span class="badge badge-info">Polite (teineigo)</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Feedback</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="feedbackForm" action="https://formspree.io/devlingrindley@gmail.com" method="POST">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="firstName">First</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstname" placeholder="First" autocomplete="given-name" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="lastName">Last</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastname" placeholder="Last" autocomplete="family-name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="emailAddress">Email</label>
+                                <input type="email" class="form-control" id="emailAddress" name="email" placeholder="your@email.com" autocomplete="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="websiteAddress">Website</label>
+                                <input type="url" class="form-control" id="websiteAddress" name="url" placeholder="yourwebsite.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="comments">Comments</label>
+                                <input type="text" class="form-control" id="comments" name="comment" placeholder="Nice site, but..." required>
+                            </div>
+                            <fieldset class="form-group">
+                                <legend class="col-form-label">How was your experience?</legend>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="rating" id="inlineRadio1" value="1" required>
+                                    <label class="form-check-label" for="inlineRadio1">Poor</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="rating" id="inlineRadio2" value="2">
+                                    <label class="form-check-label" for="inlineRadio2">Bad</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="rating" id="inlineRadio3" value="3">
+                                    <label class="form-check-label" for="inlineRadio3">OK</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="rating" id="inlineRadio4" value="4">
+                                    <label class="form-check-label" for="inlineRadio4">Good</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="rating" id="inlineRadio5" value="5">
+                                    <label class="form-check-label" for="inlineRadio5">Excellent</label>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="reset" class="btn btn-secondary" form="feedbackForm">Reset</button>
+                        <button type="submit" class="btn btn-primary" form="feedbackForm" value="Send" onclick="thankUser()">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <footer>
-            <p id="copyright">&copy; Devlin Grindley 2018, made with <a href="http://jisho.org/">Jisho</a> & <a href="https://cors.io/">cors.io</a></p>
+            <p id="copyright">&copy; Devlin Grindley 2018, made with <a href="http://jisho.org/">Jisho</a> & <a href="https://cors.io/">cors.io</a> | <a href="#feedback" data-toggle="modal" data-target="#feedbackModal">feedback</a></p>
         </footer>
     
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>

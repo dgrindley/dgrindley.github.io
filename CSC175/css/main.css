@@ -26,6 +26,10 @@ h2 {
     line-height: 24px;
 }
 
+.table-hover tbody tr {
+    cursor: pointer;
+}
+
 footer {
     padding-top: 24px;
 }

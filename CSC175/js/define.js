@@ -4,6 +4,33 @@ var currentResults = [];
 // keyword that is currently being looked at
 var currentKeyword = "";
 
+// mouse move click prevent (http://jsfiddle.net/rodneyrehm/UhD4e/)
+(function($){
+    var $doc = $(document),
+        moved = false,
+        pos = {x: null, y: null},
+        abs = Math.abs,
+        mclick = {
+        'mousedown.mclick': function(e) {
+            pos.x = e.pageX;
+            pos.y = e.pageY;
+            moved = false;
+        },
+        'mouseup.mclick': function(e) {
+            moved = abs(pos.x - e.pageX) > $.clickMouseMoved.threshold
+                || abs(pos.y - e.pageY) > $.clickMouseMoved.threshold;
+        }
+    };
+    
+    $doc.on(mclick);
+    
+    $.clickMouseMoved = function () {
+        return moved;
+    };
+    
+    $.clickMouseMoved.threshold = 3;
+})(jQuery);
+
 $(document).ready(function () {
     // search upon pressing enter
     $("#sentence").keyup(function(event) {
@@ -39,7 +66,7 @@ $(document).ready(function () {
 
                     english = english.slice(0, -2); // cut off trailing space + comma
 
-                    $("#results tbody").append("<tr title='" + word + "'><td>" + word + "</td><td>" + reading + "</td><td>" + english + "</td></tr>");
+                    $("#results tbody").append("<tr title='" + word + "'><td>" + word + "</td><td>"+ reading + "</td><td>" + english + "</td></tr>");
                 }
             }
         }
@@ -47,10 +74,16 @@ $(document).ready(function () {
 
     // detailed view of entry through modal
     $("#results tbody").on("click", "tr", function() {
+        // don't show modal if mouse moves
+        // this is done to make copying entries not annoying
+        if ($.clickMouseMoved()) {
+            return;
+        }
+
         var currentWord = $(this).attr("title");
 
         // set data for modal
-        $("#modalTitle").text(currentWord);
+        $("#modalTitle").html("<a href='https://jisho.org/search/" + currentWord + "'>" + currentWord + "</a>");
 
         var currentRow = $(this).closest("tr").index(); // index of row
 
